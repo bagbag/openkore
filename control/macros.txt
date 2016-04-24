@@ -1,0 +1,60 @@
+automacro warpmap {
+	timeout 10
+
+	call {
+		$lckMap = @config(lockMap);
+		
+		if ($.map != $lckMap) {
+			do c @warp $lckMap
+		}
+	}
+}
+
+automacro autoaloot {
+	delay 5
+	run-once 1
+	call aloot
+}
+
+macro aloot {
+	do c @aloot item Yggdrasil Berry
+	#do c @aloot item Poison Bottle
+	#do c @aloot item Witched Starsand
+	#do c @aloot item Prickly Fruit
+	#do c @aloot item Yggdrasil Leaf
+	#do c @aloot item Blade Lost in Darkness
+	#do c @aloot item Cursed Water
+	#do c @aloot item Golden Hair
+}
+
+macro berrybox {
+	do ai manual
+	do c @die
+	do c @go 0
+	do move prt_in 35 98
+	
+	$berrynpc = @npc ("Berry Exchanger")
+	$exit = 0
+	
+	while ($exit == 0) as berryboxloop
+	
+		log inventory: @invamount(Yggdrasil Berry) berrys left
+		while (@invamount(Yggdrasil Berry) >= 10) as npcloop
+			do talk $berrynpc
+			do talk resp 0
+		end npcloop
+		
+		do c @storage
+		pause 1
+		log storage: @storamount(Yggdrasil Berry) berrys left
+		if (@storamount(Yggdrasil Berry) >= 10) {
+			do storage get Yggdrasil Berry 100
+		} else { 
+			$exit = 1
+			log berrybox done
+		}
+		do storage close
+	end berryboxloop
+	
+	do ai auto
+}

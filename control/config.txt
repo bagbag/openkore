@@ -10,54 +10,18 @@ password
 loginPinCode
 char
 
-# Poseidon Settings (http://wiki.openkore.com/index.php/PoseidonServer)
-# They must be the same as Query Server config in Poseidon.txt
-poseidonServer 127.0.0.1
-poseidonPort 24390
-
-bindIp
-forceMapIP
-
-# 1 = hook into RO client, 2 = Act as stand-alone proxy, proxy = act as true proxy
-# http://wiki.openkore.com/index.php/XKore
-XKore 0
-XKore_port 2350
-XKore_dll NetRedirect.dll
-XKore_autoAttachIfOneExe 1
-XKore_silent 1
-XKore_bypassBotDetection 0
-XKore_exeName ragexe.exe
-
-# XKore 2 / Proxy configuration
-XKore_listenIp 127.0.0.1
-XKore_listenPort 6901
-XKore_publicIp 127.0.0.1
-XKore_ID
-
-# It is not advised to set secureAdminPassword if you're using Xkore 2
-secureAdminPassword 1
-adminPassword
-callSign
-commandPrefix ;
-callSignGM 0
-inGameAuth 0
-
-pauseCharServer 0
-pauseMapServer 0
+pauseCharServer 1
+pauseMapServer 1
 ignoreInvalidLogin 0
-secureLogin_requestCode
-
-# Opening cash shop when connected to map server (recv/ST0)
-whenInGame_requestCashPoints 0
 
 message_length_max 80
 
 ######## Main configuration ########
 
-alias_heal sp 28
+macro_file macros.txt
 
 allowedMaps
-allowedMaps_reaction 1
+allowedMaps_reaction 0
 
 attackAuto 2
 attackAuto_party 1
@@ -65,9 +29,9 @@ attackAuto_onlyWhenSafe 0
 attackAuto_followTarget 1
 attackAuto_inLockOnly 1
 attackAuto_notInTown 1
-attackDistance 1.5
-attackDistanceAuto 0
-attackMaxDistance 2.5
+attackDistance 15
+attackDistanceAuto 1
+attackMaxDistance 15
 attackMaxRouteDistance 100
 attackMaxRouteTime 4
 attackMinPlayerDistance 2
@@ -97,35 +61,12 @@ attackEquip_armor
 attackEquip_shoes
 attackEquip_arrow
 
-#You need the breakTime plugin: http://wiki.openkore.com/index.php?title=BreakTime
-autoBreakTime {
-	startTime
-	stopTime
-}
-
-autoConfChange {
-	minTime
-	varTime
-	lvl
-	joblvl
-}
-
-autoMakeArrows 0
-
 autoRestart 0
-
 autoRestartMin 10800
 autoRestartSeed 3600
-
 autoRestartSleep 1
 autoSleepMin 900
 autoSleepSeed 900
-
-autoResponse 0
-autoResponseOnHeal 0
-
-autoSpell
-autoSpell_safe
 
 avoidGM_namePattern
 avoidGM_near 0
@@ -146,9 +87,8 @@ clientSight 20
 
 dcPause 1
 dcOnDeath 0
-dcOnDualLogin 0
+dcOnDualLogin 1
 dcOnDisconnect 0
-dcOnEmptyArrow 0
 dcOnMaxReconnections 0
 dcOnMute 0
 dcOnPM 0
@@ -160,31 +100,17 @@ dcOnServerClose 0
 dcOnJobLevel
 dcOnLevel
 
-follow 0
-followCheckLOS 0
-followTarget
-followEmotion 1
-followEmotion_distance 4
-followFaceDirection 0
-followDistanceMax 6
-followDistanceMin 3
-followLostStep 12
-followSitAuto 0
-followBot 0
-followRandom 0
-followRandomDistance 4
-
 itemsTakeAuto 2
-itemsTakeAuto_party 0
+itemsTakeAuto_party 2
 itemsGatherAuto 2
 itemsMaxWeight 89
 itemsMaxWeight_sellOrStore 48
 itemsMaxNum_sellOrStore 99
-cartMaxWeight 7900
+cartMaxWeight 79000
 itemsTakeAuto_new 0
 itemsTakeGreed 0
 
-lockMap
+lockMap um_dun02
 lockMap_x
 lockMap_y
 lockMap_randX
@@ -211,17 +137,9 @@ runFromTarget_dist 6
 saveMap
 saveMap_warpToBuyOrSell 1
 saveMap_warpChatCommand
-memo1
-memo2
-memo3
-memo4
 
-shopAuto_open 0
-shop_random 0
-shop_useSkill 1
-
-sitAuto_hp_lower 40
-sitAuto_hp_upper 100
+sitAuto_hp_lower 0
+sitAuto_hp_upper 10
 sitAuto_sp_lower 0
 sitAuto_sp_upper 0
 sitAuto_follow 0
@@ -231,18 +149,7 @@ sitAuto_look
 sitAuto_look_from_wall
 sitTensionRelax 0
 
-statsAddAuto 0
-statsAddAuto_list
-statsAddAuto_dontUseBonus 0
-statsAdd_over_99 0
-
-skillsAddAuto 0
-skillsAddAuto_list
-
-tankMode 0
-tankModeTarget
-
-teleportAuto_hp 10
+teleportAuto_hp 0
 teleportAuto_sp 0
 teleportAuto_idle 0
 teleportAuto_portal 0
@@ -250,30 +157,18 @@ teleportAuto_search 0
 teleportAuto_minAggressives 0
 teleportAuto_minAggressivesInLock 0
 teleportAuto_onlyWhenSafe 0
-teleportAuto_maxDmg 500
+teleportAuto_maxDmg 0
 teleportAuto_maxDmgInLock 0
-teleportAuto_deadly 1
+teleportAuto_deadly 0
 teleportAuto_useSkill 3
-teleportAuto_useChatCommand
-teleportAuto_allPlayers 0
+teleportAuto_useChatCommand @go 0
+teleportAuto_allPlayers 1
 teleportAuto_notPlayers
 teleportAuto_atkCount 0
 teleportAuto_atkMiss 10
 teleportAuto_unstuck 0
-teleportAuto_lostTarget 0
-teleportAuto_dropTarget 0
-teleportAuto_dropTargetKS 0
-teleportAuto_attackedWhenSitting 0
-teleportAuto_totalDmg 0
-teleportAuto_totalDmgInLock 0
-teleportAuto_equip_leftAccessory
-teleportAuto_equip_rightAccessory
-teleportAuto_lostHomunculus
-teleportAuto_useItemForRespawn
-teleportAuto_item1
-teleportAuto_item2
 
-dealAuto 1
+dealAuto 0
 dealAuto_names
 partyAuto 1
 partyAutoShare 0
@@ -298,9 +193,9 @@ wx_map_monsterSticking 1
 wx_map_npcSticking 1
 wx_map_playersSticking 1
 wx_map_portalSticking 5
-wx_map_route
-wx_npcTalk
-wx_captcha
+wx_map_route 1
+wx_npcTalk 1
+wx_captcha 0
 showAllDamage 0
 manualURL http://wiki.openkore.com/index.php?title=Manual
 forumURL http://forums.openkore.com
@@ -341,359 +236,72 @@ status_mapType 0
 removeActorWithDistance
 monster_filter
 
-######## Mercenary Support ########
-
-mercenary_attackAuto 2
-mercenary_attackAuto_party 1
-mercenary_attackAuto_notInTown 1
-mercenary_attackAuto_onlyWhenSafe 0
-mercenary_attackDistance 1.5
-mercenary_attackMaxDistance 2.5
-mercenary_attackMaxRouteTime 4
-mercenary_attackCanSnipe 0
-mercenary_attackCheckLOS 0
-mercenary_attackNoGiveup 0
-mercenary_attackChangeTarget 1
-
-mercenary_followDistanceMax 10
-mercenary_followDistanceMin 3
-
-mercenary_route_step 15
-
-mercenary_tankMode 0
-mercenary_tankModeTarget
-
-mercenary_teleportAuto_hp 10
-mercenary_teleportAuto_maxDmg 500
-mercenary_teleportAuto_maxDmgInLock 0
-mercenary_teleportAuto_deadly 1
-mercenary_teleportAuto_unstuck 0
-mercenary_teleportAuto_dropTarget 0
-mercenary_teleportAuto_dropTargetKS 0
-mercenary_teleportAuto_totalDmg 0
-mercenary_teleportAuto_totalDmgInLock 0
-mercenary_teleportAuto_attackedWhenSitting 0
-
-######## Homunculus Support ########
-
-homunculus_attackAuto 2
-homunculus_attackAuto_party 1
-homunculus_attackAuto_notInTown 1
-homunculus_attackAuto_onlyWhenSafe 0
-homunculus_attackDistance 1.5
-homunculus_attackMaxDistance 2.5
-homunculus_attackMaxRouteTime 4
-homunculus_attackCanSnipe 0
-homunculus_attackCheckLOS 0
-homunculus_attackNoGiveup 0
-homunculus_attackChangeTarget 1
-
-homunculus_followDistanceMax 10
-homunculus_followDistanceMin 3
-
-homunculus_route_step 15
-
-homunculus_tankMode 0
-homunculus_tankModeTarget
-
-homunculus_runFromTarget 0
-homunculus_runFromTarget_dist 6
-
-homunculus_StandByAuto 0
-homunculus_teleportAuto_hp 10
-homunculus_teleportAuto_maxDmg 500
-homunculus_teleportAuto_maxDmgInLock 0
-homunculus_teleportAuto_deadly 1
-homunculus_teleportAuto_unstuck 0
-homunculus_teleportAuto_dropTarget 0
-homunculus_teleportAuto_dropTargetKS 0
-homunculus_teleportAuto_totalDmg 0
-homunculus_teleportAuto_totalDmgInLock 0
-homunculus_teleportAuto_attackedWhenSitting 0
-
-# Turn on/off homunculus autofeeding
-homunculus_autoFeed 1
-# Feed homunculus when meet the hunger value (homunculus_hunger > homunculus_return)
-homunculus_hunger 15
-# Return homunculus when meet the hunger value
-homunculus_return 11
-# In Wich maps should we allow feeding? (leave empty for any map)
-homunculus_autoFeedAllowedMaps
-
-# Turn on/off pet autofeeding
-pet_autoFeed 1
-# Feed pet when meet the hunger value
-pet_hunger 25
-# Return pet when meet the hunger value
-pet_return 20
-
 ######## Block options ########
 # You can copy & paste any block multiple times. So if you want to
 # configure two attack skills, just duplicate the attackSkillSlot block.
 
-attackSkillSlot {
-	lvl 10
-	dist 1.5
-	maxCastTime 0
-	minCastTime 0
-	hp
-	sp > 10
-	homunculus_hp
-	homunculus_sp
-	homunculus_dead
-	onAction
-	whenStatusActive
-	whenStatusInactive
-	whenFollowing
-	spirit
-	amuletType
-	aggressives
-	previousDamage
-	stopWhenHit 0
-	inLockOnly 0
-	notInTown 0
-	timeout 0
+attackSkillSlot Arrow Storm {
+	lvl 5
+	sp > 20%
 	disabled 0
-	monsters
-	notMonsters
-	monstersCount
-	maxAttempts 0
-	maxUses 0
-	target_hp
-	target_whenStatusActive
-	target_whenStatusInactive
-	target_deltaHp
-	inInventory
 	isSelfSkill 0
-	equip_topHead
-	equip_midHead
-	equip_lowHead
-	equip_leftHand
-	equip_rightHand
-	equip_leftAccessory
-	equip_rightAccessory
-	equip_robe
-	equip_armor
-	equip_shoes
-	equip_arrow
-	manualAI 0
 }
 
-attackComboSlot {
-	afterSkill
-	waitBeforeUse
-	dist 1.5
-	isSelfSkill 1
-	target_hp
-	target_deltaHp
-	monsters
-	notMonsters
-	monstersCount
-}
-
-doCommand {
-	hp
-	sp
-	homunculus_hp
-	homunculus_sp
-	homunculus_dead
-	onAction
-	whenStatusActive
-	whenStatusInactive
-	whenFollowing
-	spirit
-	amuletType
-	aggressives
-	monsters
-	notMonsters
-	monstersCount
-	stopWhenHit 0
-	inLockOnly 0
-	notWhileSitting 0
-	notInTown 0
-	timeout
-	disabled 0
-	inInventory
-	inCart
-	inMap
-	manualAI 0
-}
-
-useSelf_skill {
+useSelf_skill Attention Concentrate {
 	lvl 10
-	maxCastTime 0
-	minCastTime 0
-	hp
-	sp
-	homunculus_hp
-	homunculus_sp
-	homunculus_dead
-	onAction
-	whenStatusActive
-	whenStatusInactive
-	whenFollowing
-	spirit
-	amuletType
-	aggressives
-	monsters
-	notMonsters
-	monstersCount
+	sp >= 40%
+	onAction attack
+	whenStatusInactive Attention Concentrate
+	notWhileSitting 1
+	notInTown 1
+	timeout 3
+}
+useSelf_skill Fear Breeze {
+	lvl 10
+	sp >= 40%
+	onAction attack
+	whenStatusInactive Fear Breeze
+	notWhileSitting 1
+	notInTown 1
+	timeout 3
+}
+useSelf_skill True Sight {
+	lvl 10
+	sp >= 35%
+	onAction attack
+	whenStatusInactive True Sight
 	stopWhenHit 0
-	inLockOnly 0
-	notWhileSitting 0
-	notInTown 0
-	timeout 0
-	disabled 0
-	inInventory
-	manualAI 0
+	notWhileSitting 1
+	notInTown 1
+	timeout 3
+}
+useSelf_skill Wind Walk {
+	lvl 10
+	sp > 40%
+	onAction move
+	whenStatusInactive Wind Walk
+	notWhileSitting 1
+	notInTown 1
+	timeout 3
+}
+
+useSelf_item Yggdrasil Seed {
+	hp < 50%
+}
+
+useSelf_item Yggdrasil Seed {
+	sp < 50%
 }
 
 useSelf_skill_smartHeal 1
 
 partySkillDistance 0..8
 
-partySkill {
-	lvl 10
-	dist 3
-	maxCastTime 0
-	minCastTime 0
-	hp
-	sp
-	homunculus_hp
-	homunculus_sp
-	homunculus_dead
-	onAction
-	whenStatusActive
-	whenStatusInactive
-	whenFollowing
-	spirit
-	amuletType
-	aggressives
-	monsters
-	notMonsters
-	monstersCount
-	stopWhenHit 0
-	inLockOnly 0
-	notWhileSitting 0
-	notInTown 0
-	timeout 0
-	disabled 0
-	manualAI 0
-	target
-	target_hp
-	target_isJob
-	target_isNotJob
-	target_whenStatusActive
-	target_whenStatusInactive
-	target_aggressives
-	target_monsters
-	target_timeout 0
-	target_deltaHp
-	target_dead 0
-	inInventory
-	isSelfSkill 0
-}
-
-monsterSkill {
-	target
-	maxUses
-	# Skill Use Conditions, including isSelfSkill
-	# Self Conditions
-	# Target Monster Conditions
-}
-
 autoSwitch_default_rightHand
 autoSwitch_default_leftHand
 autoSwitch_default_arrow
 
-# NOTE: In the case of two handed weapons, or no Shield,
-#       duplicate the weapon name for 'rightHand'
-# To attack with bare hands, specify "[NONE]" (without the quotes) for rightHand
-
-autoSwitch {
-	rightHand
-	leftHand
-	arrow
-	distance
-	useWeapon
-}
-
-equipAuto {
-	topHead
-	midHead
-	lowHead
-	leftHand
-	rightHand
-	leftAccessory
-	rightAccessory
-	robe
-	armor
-	shoes
-	arrow
-	monsters
-	notMonsters
-	monstersCount
-	weight 0
-	whileSitting 0
-	hp
-	sp
-	homunculus_hp
-	homunculus_sp
-	homunculus_dead
-	onAction
-	whenStatusActive
-	whenStatusInactive
-	whenFollowing
-	spirit
-	amuletType
-	aggressives
-	stopWhenHit 0
-	inLockOnly 0
-	notWhileSitting 0
-	notInTown 0
-	timeout 0
-	disabled 0
-	inInventory
-	manualAI 0
-}
-
-useSelf_item {
-	hp
-	sp
-	homunculus_hp
-	homunculus_sp
-	homunculus_dead
-	onAction
-	whenStatusActive
-	whenStatusInactive
-	whenFollowing
-	spirit
-	amuletType
-	aggressives
-	monsters
-	notMonsters
-	monstersCount
-	stopWhenHit 0
-	inLockOnly 0
-	notWhileSitting 0
-	notInTown 0
-	timeout
-	disabled 0
-	inInventory
-	manualAI 0
-}
-
 ######## Autostorage/autosell ########
-
-buyAuto {
-	npc
-	standpoint
-	distance 5
-	price
-	minAmount 2
-	maxAmount 3
-	disabled 0
-}
 
 sellAuto 0
 sellAuto_npc
@@ -701,7 +309,7 @@ sellAuto_standpoint
 sellAuto_distance 5
 sellAuto_npc_steps s e
 
-storageAuto 0
+storageAuto 1
 storageAuto_npc
 storageAuto_distance 5
 storageAuto_npc_type 1
@@ -709,32 +317,9 @@ storageAuto_npc_steps
 storageAuto_password
 storageEncryptKey
 storageAuto_keepOpen 0
-storageAuto_useChatCommand
+storageAuto_useChatCommand @storage
 storageAuto_notAfterDeath
 relogAfterStorage 0
 minStorageZeny 50
 
 npcTimeResponse
-
-getAuto {
-	minAmount
-	maxAmount
-	passive
-}
-
-######## Debugging options; only useful for developers ########
-
-debug 0
-debugPacket_unparsed 0
-debugPacket_received 0
-debugPacket_ro_sent 0
-debugPacket_sent 0
-debugPacket_exclude
-debugPacket_include
-debugPacket_include_dumpMethod
-debugDomains
-logToFile_Debug
-logToFile_Errors
-logToFile_Messages
-logToFile_Warnings
-history_max 50

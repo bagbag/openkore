@@ -12,6 +12,14 @@
 #<flag> - 1 to pickup the item, 0 to leave it alone
 #
 #Use the item name "all" to tell kore to pickup or not pickup all items by default
-all 1
-# jellopy 0
-# fluff 0
+
+all 0
+#Poison Bottle 2
+Yggdrasil Berry 2
+Witched Starsand 2
+Witch Starsand 2
+Prickly Fruit 2
+Yggdrasil Leaf 2
+Blade Lost in Darkness 2
+Cursed Water 2
+Golden Hair 2
