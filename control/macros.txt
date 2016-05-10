@@ -18,7 +18,7 @@ automacro autoaloot {
 
 macro aloot {
 	do c @aloot item Yggdrasil Berry
-	#do c @aloot item Poison Bottle
+	do c @aloot item Poison Bottle
 	#do c @aloot item Witched Starsand
 	#do c @aloot item Prickly Fruit
 	#do c @aloot item Yggdrasil Leaf

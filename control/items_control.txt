@@ -36,7 +36,7 @@
 # An auto-sell list and auto-storage list is provided by default, modify it
 # as you see fit.
 
-#Poison Bottle 0 1 0 0
+Poison Bottle 0 1 0 0
 Yggdrasil Berry 0 1 0 0
 Witched Starsand 0 1 0 0
 Witch Starsand 0 1 0 0

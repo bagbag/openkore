@@ -61,10 +61,10 @@ attackEquip_armor
 attackEquip_shoes
 attackEquip_arrow
 
-autoRestart 0
-autoRestartMin 10800
-autoRestartSeed 3600
-autoRestartSleep 1
+autoRestart 1
+autoRestartMin 1800
+autoRestartSeed 360
+autoRestartSleep 0
 autoSleepMin 900
 autoSleepSeed 900
 
@@ -215,7 +215,7 @@ logDead 0
 chatTitleOversize 0
 shopTitleOversize 0
 
-sleepTime 10000
+sleepTime 50000
 
 ignoreAll 0
 itemHistory 0
