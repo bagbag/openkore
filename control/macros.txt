@@ -11,8 +11,8 @@ automacro warpmap {
 }
 
 automacro autoaloot {
-	delay 5
-	run-once 1
+	delay 15
+	timeout 300
 	call aloot
 }
 
@@ -28,10 +28,13 @@ macro aloot {
 }
 
 macro berrybox {
+	$autorestart = @config (autoRestart)
+	log autorestart was $autorestart
+	do conf autoRestart 0
+
 	do ai manual
 	do c @die
-	do c @go 0
-	do move prt_in 35 98
+	do c @warp prt_in 35 98
 	
 	$berrynpc = @npc ("Berry Exchanger")
 	$exit = 0
@@ -56,5 +59,6 @@ macro berrybox {
 		do storage close
 	end berryboxloop
 	
+	do conf autoRestart autorestart
 	do ai auto
 }
