@@ -161,9 +161,9 @@ teleportAuto_maxDmg 0
 teleportAuto_maxDmgInLock 0
 teleportAuto_deadly 0
 teleportAuto_useSkill 3
-teleportAuto_useChatCommand @go 0
+teleportAuto_useChatCommand @warp um_dun02
 teleportAuto_allPlayers 1
-teleportAuto_notPlayers
+teleportAuto_notPlayers laynord,elegazio
 teleportAuto_atkCount 0
 teleportAuto_atkMiss 10
 teleportAuto_unstuck 0
@@ -215,7 +215,7 @@ logDead 0
 chatTitleOversize 0
 shopTitleOversize 0
 
-sleepTime 50000
+sleepTime 35000
 
 ignoreAll 0
 itemHistory 0
