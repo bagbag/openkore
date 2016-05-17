@@ -35,6 +35,7 @@ macro berrybox {
 	do ai manual
 	do c @die
 	do c @warp prt_in 35 98
+	do look 2 0
 	
 	$berrynpc = @npc ("Berry Exchanger")
 	$exit = 0
