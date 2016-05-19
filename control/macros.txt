@@ -1,4 +1,5 @@
 automacro warpmap {
+delay 5
 	timeout 10
 
 	call {
@@ -11,8 +12,8 @@ automacro warpmap {
 }
 
 automacro autoaloot {
-	delay 5
-	timeout 10
+	delay 17
+	timeout 300
 	call aloot
 }
 
