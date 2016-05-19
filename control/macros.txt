@@ -12,7 +12,7 @@ delay 5
 }
 
 automacro autoaloot {
-	delay 17
+	delay 30
 	timeout 300
 	call aloot
 }
