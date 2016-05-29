@@ -14,7 +14,7 @@
 #Use the item name "all" to tell kore to pickup or not pickup all items by default
 
 all 0
-#Poison Bottle 2
+Poison Bottle 2
 Yggdrasil Berry 2
 Witched Starsand 2
 Witch Starsand 2
