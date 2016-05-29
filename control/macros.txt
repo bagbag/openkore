@@ -20,6 +20,7 @@ automacro autodie {
 
 macro die {
 	do c @die
+	pause 2
 	do c @warp $lckMap
 }
 
