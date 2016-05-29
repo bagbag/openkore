@@ -61,7 +61,7 @@ attackEquip_armor
 attackEquip_shoes
 attackEquip_arrow
 
-autoRestart 1
+autoRestart 0
 autoRestartMin 1800
 autoRestartSeed 360
 autoRestartSleep 0

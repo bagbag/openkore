@@ -1,5 +1,5 @@
 automacro warpmap {
-delay 5
+	delay 5
 	timeout 10
 
 	call {
@@ -8,6 +8,16 @@ delay 5
 		if ($.map != $lckMap) {
 			do c @warp $lckMap
 		}
+	}
+}
+
+automacro autodie {
+	delay 3
+	timeout 1800
+	
+	call {
+		do c @die
+		do c @warp $lckMap
 	}
 }
 
@@ -29,10 +39,6 @@ macro aloot {
 }
 
 macro berrybox {
-	$autorestart = @config (autoRestart)
-	log autorestart was $autorestart
-	do conf autoRestart 0
-
 	do ai manual
 	do c @die
 	do c @warp prt_in 35 98
@@ -61,6 +67,5 @@ macro berrybox {
 		do storage close
 	end berryboxloop
 	
-	do conf autoRestart autorestart
 	do ai auto
 }
