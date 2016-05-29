@@ -15,10 +15,12 @@ automacro autodie {
 	delay 3
 	timeout 1800
 	
-	call {
-		do c @die
-		do c @warp $lckMap
-	}
+	call die
+}
+
+macro die {
+	do c @die
+	do c @warp $lckMap
 }
 
 automacro autoaloot {
