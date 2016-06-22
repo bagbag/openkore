@@ -15,6 +15,7 @@
 
 all 0
 #Poison Bottle 2
+Aloevera 2
 Yggdrasil Berry 2
 Witched Starsand 2
 Witch Starsand 2

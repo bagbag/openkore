@@ -60,10 +60,5 @@
 all -1
 
 #Wooden Golem 2 0 1 0 0 0 0 0
-Wootan Shooter 2 0 1 0 0 0 0 0
-Hodremlin 2 0 1 0 0 0 0 0
-Seeker 2 0 1 0 0 0 0 0
-Beholder 2 0 1 0 0 0 0 0
-Violy 2 0 1 0 0 0 0 0
-False Angel 2 0 1 0 0 0 0 0
-Abysmal Knight 2 0 1 0 0 0 0 0
+#Wootan Shooter 2 0 1 0 0 0 0 0
+Tri Joint 2 0 1 0 0 0 0 0

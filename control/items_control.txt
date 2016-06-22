@@ -37,6 +37,7 @@
 # as you see fit.
 
 #Poison Bottle 0 1 0 0
+Aloevera 0 1 0 0
 Yggdrasil Berry 0 1 0 0
 Witched Starsand 0 1 0 0
 Witch Starsand 0 1 0 0

@@ -110,7 +110,7 @@ cartMaxWeight 79000
 itemsTakeAuto_new 0
 itemsTakeGreed 0
 
-lockMap um_dun02
+lockMap beach_dun2
 lockMap_x
 lockMap_y
 lockMap_randX
@@ -161,7 +161,7 @@ teleportAuto_maxDmg 0
 teleportAuto_maxDmgInLock 0
 teleportAuto_deadly 0
 teleportAuto_useSkill 3
-teleportAuto_useChatCommand @warp um_dun02
+teleportAuto_useChatCommand @warp beach_dun2
 teleportAuto_allPlayers 1
 teleportAuto_notPlayers laynord,elegazio
 teleportAuto_atkCount 0
